@@ -1,0 +1,93 @@
+%form-basis
+    padding: 10px
+    border: 1px solid $grey-color-light
+    border-radius: 4px
+    font: inherit
+    background-color: #fff
+    transition: 0.3s ease-in-out
+    outline: none
+    &:focus
+        border-color: $grey-color
+        box-shadow: 0 2px 10px 0 rgba($brand-color, .5)
+
+%form-inputs
+    width: 100%
+    font-family: inherit
+    letter-spacing: 1px
+
+fieldset
+    -webkit-margin-start: 0
+    -webkit-margin-end: 0
+    -webkit-padding-before: 0
+    -webkit-padding-start: 0
+    -webkit-padding-end: 0
+    -webkit-padding-after: 0
+    padding: 0 0 $spacing-unit
+    border: none
+
+label
+    display: block
+    font:
+        family: $title-font-family
+        size: 0.75em
+        weight: 600
+    text-transform: uppercase
+    line-height: 1.5
+
+input
+    &[type='text'],
+    &[type='password'],
+    &[type='search'],
+    &[type='tel'],
+    &[type='url'],
+    &[type='email'],
+    &[type='datetime'],
+    &[type='date'],
+    &[type='time'],
+    &[type='month'],
+    &[type='week'],
+    &[type='datetime-local'],
+    &[type='number'],
+    &[type='range']
+        @extend %form-basis
+        @extend %form-inputs
+
+textarea
+    @extend %form-basis
+    @extend %form-inputs
+
+\::-webkit-input-placeholder
+    color: $grey-color
+
+\:-moz-placeholder
+    color: $grey-color
+
+\::-moz-placeholder
+    color: $grey-color
+
+\:-ms-input-placeholder
+    color: $grey-color
+
+\:focus::-webkit-input-placeholder
+    -webkit-transition: 0.5s 0.5s ease
+    transition: 0.5s 0.5s ease
+    text-indent: -100%
+    opacity: 0
+
+.honeypot
+    display: none
+
+button
+    @extend %form-basis
+    padding-left: 2em
+    padding-right: 2em
+    text-transform: uppercase
+    background-color: transparent
+    border: 1px solid $brand-color
+    border-radius: 500px
+    color: $brand-color
+    line-height: 1.5
+    &:hover, &:focus
+        background-color: $brand-color
+        border-color: $brand-color
+        color: #fff

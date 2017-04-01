@@ -1,0 +1,54 @@
+=media-query($device)
+    @media screen and (max-width: $device)
+        @content
+
+=media-greater($device)
+    @media screen and (min-width: $device + 1)
+        @content
+
+=btn-shadow($color)
+    background-color: $color
+    box-shadow: none
+    transition: 0.5s ease-in-out
+    transform: translate(0)
+    &:hover, &:focus
+        outline: none
+        transform: translateY(0)
+        box-shadow: inset 0 1px 3px 0 rgba(#fff, 0.5), 0 -1px 5px 1px $color
+
+$am-prefix: data
+
+@function split-braces($target)
+    $start: str-index($target, "[")
+    $end: str-index($target, "]")
+    @return str-slice($target, $start + 1, $end - 1)
+
+=module($name)
+    @if $am-prefix == null
+        @warn "You need to define $am-prefix variable"
+    $moduleName: #{$am-prefix}-#{$name}
+    @at-root [#{$moduleName}]
+        @content
+
+=variant($valueName)
+    $result: split-braces(#{&})
+    @at-root [#{$result}~="#{$valueName}"]
+        @content
+
+=child($childName)
+    $result: split-braces(#{&})
+    @at-root [#{$result}-#{$childName}]
+        @content
+
+=keyframes($keyframes-name)
+    @-webkit-keyframes #{$keyframes-name}
+        @content
+
+    @-moz-keyframes #{$keyframes-name}
+        @content
+
+    @-o-keyframes #{$keyframes-name}
+        @content
+
+    @keyframes #{$keyframes-name}
+        @content
