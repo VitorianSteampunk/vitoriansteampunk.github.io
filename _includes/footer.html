@@ -3,33 +3,16 @@
   <div class="wrapper">
 
     <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+    
+    <div data-grid="center spacing">
+      <div data-cell="1of4 stretch">{% include favicon.svg %}</div>
+      <div data-cell="2of4">{{ site.description }}</div>
+      <div data-cell="1of4">
+        <ul>
+          <li>Empresa</li>
+          <li>Produtos</li>
+          <li>Facebook</li>
         </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
       </div>
     </div>
 
