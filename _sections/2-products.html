@@ -4,10 +4,17 @@ menu-title: Produtos
 name: produtos
 ---
 
-<div data-grid="small-spacing">
+<div data-grid="center" class="produtos-decoration">{% include svg/floral-design-1.svg %}</div>
+
+<div data-grid="small-spacing" class="wrapper large produtos-gallery">
     {% for p in site.produtos %}
-        <div data-cell="1of4">
-            <img src="{{ site.baseurl }}/img{{ p.url | remove: '.html' }}.jpg" alt="{{ p.title }}">
+        <div data-cell="1of4" class="produtos-item">
+            <a href="{{ p.url }}" class="produtos-link" title="Comprar {{ p.title }}">
+                <img src="{{ site.baseurl }}/img{{ p.url | remove: '.html' }}.jpg" alt="{{ p.title }}">
+                <span class="produto-title">{{ p.title }}</span>
+            </a>
         </div>
     {% endfor %}
 </div>
+
+<div data-grid="center" class="produtos-decoration">{% include svg/floral-design-2.svg %}</div>
