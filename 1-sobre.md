@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Sobre
-menu-title: Sobre
+title: Sobre a Vitorian Steampunk
+menu-title: Empresa
 permalink: /sobre/
 ---
 
