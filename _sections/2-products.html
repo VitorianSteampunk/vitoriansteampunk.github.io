@@ -1,0 +1,13 @@
+---
+title: Nossos produtos
+menu-title: Produtos
+name: produtos
+---
+
+<div data-grid="small-spacing">
+    {% for p in site.produtos %}
+        <div data-cell="1of4">
+            <img src="{{ site.baseurl }}/img{{ p.url | remove: '.html' }}.jpg" alt="{{ p.title }}">
+        </div>
+    {% endfor %}
+</div>
