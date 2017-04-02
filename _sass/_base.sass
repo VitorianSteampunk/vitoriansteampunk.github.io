@@ -52,6 +52,7 @@ h1, h2, h3, h4, h5, h6
 a 
     color: $brand-color
     text-decoration: none
+    transition: .3s ease-in-out
 
     &:hover, &:focus
         text-decoration: underline
@@ -90,7 +91,10 @@ pre
     padding-left: $spacing-unit
     @extend %clearfix
 
-    @include media-query($on-laptop) 
+    &.large
+        max-width: $large-content-width
+
+    +media-query($on-laptop) 
         padding-right: $spacing-unit / 2
         padding-left: $spacing-unit / 2
 
@@ -109,3 +113,12 @@ pre
         color: inherit
         path 
             fill: currentcolor
+
++module(btn)
+    padding: 8px 25px
+    background-color: $ui-color
+    color: #fff
+    border-radius: 500px
+    &:hover
+        text-decoration: none
+        box-shadow: 0 3px 10px 0 $grey-color

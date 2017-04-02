@@ -1,17 +1,22 @@
-.site-header 
-    border-top: 5px solid $grey-color-dark
-    border-bottom: 1px solid $grey-color-light
-    min-height: 56px
-
-    position: relative
+.site-header
+    height: 56px
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
 
 .site-title 
-    font-size: 26px
-    font-weight: 300
+    font:
+        family: $title-font-family
+        size: 26px
+        weight: 300
     line-height: 56px
     letter-spacing: -1px
     margin-bottom: 0
     float: left
+    svg
+        vertical-align: text-top
 
 .site-nav 
     float: right
@@ -128,3 +133,18 @@
 
         @include media-query($on-laptop) 
             font-size: 18px
+
+.section-home
+    background:
+        image: url(/img/room-light.jpg)
+        repeat: no-repeat
+        position: top center
+        size: cover
+    padding-bottom: 80vmin
+    .home-content
+        height: 500px
+        padding-top: 60px
+        padding-bottom: 60px
+        .home-excerpt
+            font-weight: 600
+            text-shadow: 0 1px 1px #fff, 0 1px 1px #fff, 0 1px 1px #fff, 0 1px 1px #fff
