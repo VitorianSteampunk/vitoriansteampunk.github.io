@@ -43,6 +43,7 @@ h1, h2, h3, h4, h5, h6
     font:
         family: $title-font-family
         weight: $base-font-weight
+    line-height: 1.1
 
 @for $i from 1 through 6
     h#{$i}
@@ -103,6 +104,26 @@ pre
         content: ""
         display: table
         clear: both
+
+.hero
+    padding: $spacing-unit
+    background-color: $hero-color
+    color: #fff
+    a
+        color: $background-color
+        text-shadow: -1px 1px 0 $ui-color-2, -1px 1px 0 $ui-color-2, -1px 1px 0 $ui-color-2, -1px 1px 0 $ui-color-2
+    &.ui
+        background-color: $ui-color
+    &.ui-2
+        background-color: $ui-color-2
+        a
+            text-shadow: -1px 1px 0 $grey-color-dark, -1px 1px 0 $grey-color-dark, -1px 1px 0 $grey-color-dark, -1px 1px 0 $grey-color-dark
+    &.brand
+        background-color: $brand-color
+        color: $text-color
+        a
+            color: $ui-color-2
+            text-shadow: -1px 1px 0 $background-color, -1px 1px 0 $background-color, -1px 1px 0 $background-color, -1px 1px 0 $background-color
 
 .icon 
     > svg 
