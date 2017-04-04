@@ -31,8 +31,11 @@ figure > img
 figcaption 
     font-size: $small-font-size
 
-ul, ol 
+ul, ol
     margin-left: $spacing-unit
+    &.seamless
+        list-style: none
+        margin-left: auto
 
 li
     margin-bottom: $spacing-unit / 2
@@ -125,6 +128,10 @@ pre
             color: $ui-color-2
             text-shadow: -1px 1px 0 $background-color, -1px 1px 0 $background-color, -1px 1px 0 $background-color, -1px 1px 0 $background-color
 
+.svg-container
+    > svg
+        max-width: 100%
+
 .icon 
     > svg 
         display: inline-block
@@ -142,4 +149,4 @@ pre
     border-radius: 500px
     &:hover
         text-decoration: none
-        box-shadow: 0 3px 10px 0 $grey-color
+        box-shadow: 0 3px 10px 0 rgba(#000, .5)

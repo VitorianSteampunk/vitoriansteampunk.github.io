@@ -7,8 +7,12 @@ name: sobre
 <div class="wrapper sobre-inner" data-grid="center">
     <div data-cell="1of2"></div>
     <div data-cell="1of2" class="wrapper hero">
-        <h2>Sofisticação com um ar rústico</h2>
-        <p>Ipsa neque nisi, consectetur incidunt earum ab non sequi. Nesciunt, fugiat sed, expedita deserunt sequi perferendis reprehenderit, architecto itaque autem, mollitia ad?</p>
-        <p><a href="#">Link com a cor diferente</a></p>
+        {% for about in site.pages %}
+            {% if about.permalink == '/conceito/' %}
+                <h2>{{ about.title }}</h2>
+                <p>{{ about.excerpt }}</p>
+                <p><a href="{{ site.baeurl }}{{ about.url }}">Conheça o conceito steampunk...</a></p>
+            {% endif %}
+        {% endfor %}
     </div>
 </div>

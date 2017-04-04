@@ -25,8 +25,7 @@
     .menu-icon 
         display: none
 
-    .page-link 
-        color: $text-color
+    .page-link
         line-height: $base-line-height
         margin-left: 20px
 
@@ -136,9 +135,24 @@
         @include media-query($on-laptop) 
             font-size: 18px
 
+.site-decoration
+    svg
+        color: rgba($grey-color, .5)
+        *
+            fill: currentcolor
+
+.display-text
+    font-size: 22px
+    font-weight: 600
+    color: $hero-color
+    line-height: 1
+    text-transform: uppercase
+    text-shadow: -.05em .05em 0px $ui-color-2
+
 .section-home
     background:
-        image: url(/img/room-light.jpg)
+        color: $bg-dark-color
+        image: url(/img/room-dark.jpg)
         repeat: no-repeat
         position: top center
         size: cover
@@ -148,21 +162,19 @@
         padding-top: 60px
         padding-bottom: 60px
         .home-excerpt
-            font-weight: 600
-            text-shadow: 0 1px 1px #fff, 0 1px 1px #fff, 0 1px 1px #fff, 0 1px 1px #fff
+            @extend .display-text
+            font-size: 42px
 
 .section-produtos
 
-    .produtos-decoration
-        svg
-            color: $grey-color
-            *
-                fill: currentcolor
+    .produtos-item
+        flex: 0 0 260px
+        margin: $spacing-unit / 4
 
     .produtos-link
         display: block
         position: relative
-        padding-top: 240px
+        padding-top: 120%
         overflow: hidden
         border-radius: 15px
         box-sizing: content-box

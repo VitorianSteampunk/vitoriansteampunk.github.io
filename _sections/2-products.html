@@ -4,17 +4,21 @@ menu-title: Produtos
 name: produtos
 ---
 
-<div data-grid="center" class="produtos-decoration">{% include svg/floral-design-1.svg %}</div>
+<div data-grid="center" class="site-decoration">{% include svg/floral-design-1.svg %}</div>
 
-<div data-grid="small-spacing" class="wrapper large produtos-gallery">
-    {% for p in site.produtos %}
-        <div data-cell="1of4" class="produtos-item">
+<div data-grid="row wrap around" class="wrapper large produtos-gallery">
+    {% for p in site.produtos | limit: 8 %}
+        <div class="produtos-item">
             <a href="{{ p.url }}" class="produtos-link" title="Comprar {{ p.title }}">
-                <img src="{{ site.baseurl }}/img{{ p.url | remove: '.html' }}.jpg" alt="{{ p.title }}">
+                <img src="{{ site.baseurl }}/img/produtos/{{ p.ref }}.jpg" alt="{{ p.title }}">
                 <span class="produto-title">{{ p.title }}</span>
             </a>
         </div>
     {% endfor %}
 </div>
 
-<div data-grid="center" class="produtos-decoration">{% include svg/floral-design-2.svg %}</div>
+<div class="wrapper large" data-grid="center">
+    <p data-cell="shrink"><a href="/produtos/" data-btn>Veja todos os modelos...</a></p>
+</div>
+
+<div data-grid="center" class="site-decoration">{% include svg/floral-design-2.svg %}</div>
