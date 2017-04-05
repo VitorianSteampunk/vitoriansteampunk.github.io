@@ -18,6 +18,8 @@ collections:
     output: false
   produtos:
     output: true
+  erros:
+    output: true
   
 defaults:
   - scope:
@@ -30,3 +32,8 @@ defaults:
       type: posts
     values:
       layout: post
+  - scope:
+      path: ""
+      type: erros
+    values:
+      layout: page

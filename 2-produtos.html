@@ -1,6 +1,26 @@
 ---
 layout: page
-title: Produtos
+title: Todos os produtos
 menu-title: Produtos
 permalink: /produtos/
 ---
+
+{% for produto in site.produtos %}
+
+<div data-grid="center" class="site-decoration">{% include svg/floral-design-1.svg %}</div>
+<article data-grid="spacing" class="wrapper">
+    <div data-cell="1of3"><img src="{{ site.baseurl }}/img/produtos/{{ produto.ref }}.jpg" alt="{{ produto.title }}"></div>
+    <div data-cell="2of3">
+        <h2><a href="{{ site.baseurl }}{{ produto.url }}">{{ produto.title }}</a></h2>
+        <p><small>#{{ produto.ref }}</small></p>
+        {{ produto.content | truncatewords: 30 }}
+        <p data-grid="center spacing justify">
+            <a href="{{ site.baseurl }}{{ produto.url }}" data-cell="shrink">Mais detalhes...</a>
+            <a href="{{ produto.paycode }}" data-btn data-cell="shrink">COMPRAR</a>
+        </p>
+    </div>
+</article>
+
+{% endfor %}
+
+<div data-grid="center" class="site-decoration">{% include svg/floral-design-2.svg %}</div>
