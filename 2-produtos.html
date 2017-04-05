@@ -16,7 +16,9 @@ permalink: /produtos/
         {{ produto.content | truncatewords: 30 }}
         <p data-grid="center spacing justify">
             <a href="{{ site.baseurl }}{{ produto.url }}" data-cell="shrink">Mais detalhes...</a>
-            <a href="{{ produto.paycode }}" data-btn data-cell="shrink">COMPRAR</a>
+            {% if produto.paycode %}
+                <a href="{{ produto.paycode }}" data-btn data-cell="shrink">COMPRAR</a>
+            {% endif %}
         </p>
     </div>
 </article>

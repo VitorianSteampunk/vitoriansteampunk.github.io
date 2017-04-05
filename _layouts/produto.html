@@ -8,7 +8,16 @@ layout: default
     <div data-cell="1of2">
       <h1 class="post-title">{{ page.title }}</h1>
       <p>#{{ page.ref }}</p>
-      <p><a href="{{ page.paycode }}" data-btn="">COMPRE AGORA R${{ page.price }}</a></p>
+      {% if page.paycode %}
+        <p>
+          <a href="{{ page.paycode }}" data-btn="">
+            COMPRE AGORA 
+            {% if page.price %}
+              R${{ page.price }}
+            {% endif %}
+          </a>
+        </p>
+      {% endif %}
     </div>
   </header>
 
