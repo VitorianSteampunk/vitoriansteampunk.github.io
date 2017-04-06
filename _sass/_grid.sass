@@ -61,6 +61,12 @@
             > *
                 margin-bottom: $spacing-unit / 2
 
+    +variant(row)
+        +media-query($on-palm)
+            &[data-grid~="spacing"]
+                > :not(:last-child)
+                    margin-right: $spacing-unit / 2
+
     +variant(small-spacing)
         +media-greater($on-palm)
             > :not(:last-child)
