@@ -148,6 +148,19 @@ pre
     background-color: $ui-color
     color: #fff
     border-radius: 500px
+    font-family: $display-font-family
+    text-transform: uppercase
+    letter-spacing: 2px
     &:hover
         text-decoration: none
         box-shadow: 0 3px 10px 0 rgba(#000, .5)
+
++module(text)
+    +variant(center)
+        text-align: center
+    +variant(base)
+        font-family: $base-font-family
+    +variant(title)
+        font-family: $title-font-family
+    +variant(display)
+        font-family: $display-font-family
