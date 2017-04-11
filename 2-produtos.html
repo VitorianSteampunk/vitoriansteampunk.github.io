@@ -7,7 +7,8 @@ permalink: /produtos/
 
 {% for produto in site.produtos %}
 
-<div data-grid="center" class="site-decoration">{% include svg/floral-design-1.svg %}</div>
+<hr>
+
 <article data-grid="spacing" class="wrapper">
     <div data-cell="1of3" class="frame"><img src="{{ site.baseurl }}/img/produtos/{{ produto.ref }}.jpg" alt="{{ produto.title }}"></div>
     <div data-cell="2of3">
@@ -25,4 +26,4 @@ permalink: /produtos/
 
 {% endfor %}
 
-<div data-grid="center" class="site-decoration">{% include svg/floral-design-2.svg %}</div>
+<hr>
