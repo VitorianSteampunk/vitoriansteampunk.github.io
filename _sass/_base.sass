@@ -87,6 +87,18 @@ pre
         padding-right: 0
         padding-left: 0
 
+hr
+    border: none
+    display: table
+    margin: $spacing-unit * 4 auto
+    opacity: .7
+    &:before
+        content: url('/img/hr-ornament-2.svg')
+    +media-query($on-palm)
+        margin: $spacing-unit * 2 auto
+        &:before
+            content: url('/img/hr-ornament-3.svg')
+
 .wrapper 
     max-width: $content-width
     margin-right: auto
@@ -143,17 +155,47 @@ pre
             width: 3em
             height: 3em
 
+.frame
+    display: block
+    position: relative
+    overflow: hidden
+    border-radius: 4px
+    border: 2px solid $ocre
+    box-shadow: 0 0 0 3px $dourado, 0 0 5px 3px $ocre
+    transform: translate(0)
+    &:before, &:after
+        position: absolute
+        width: 70px
+        height: 69px
+        z-index: 9
+    &:before
+        content: url('/img/corner-square-top-right.png')
+        top: 0
+        right: 0
+    &:after
+        content: url('/img/corner-square-bottom-left.png')
+        left: 0
+        bottom: 0
+
 +module(btn)
     padding: 8px 25px
-    background-color: $ui-color
-    color: #fff
+    background-color: $ocre
+    color: $dourado
     border-radius: 500px
+    box-shadow: 0px 0px 0 2px, 0 0 10px 0 #000
     font-family: $ui-font-family
     text-transform: uppercase
     letter-spacing: 2px
-    &:hover
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+    &:hover, &:focus
         text-decoration: none
-        box-shadow: 0 3px 10px 0 rgba(#000, .5)
+        color: #fff
+        outline: none
+        box-shadow: 0px 0px 0 2px, 0 0 25px 0 #000
+    +media-query($on-palm)
+        font-size: 12px
 
 +module(text)
     +variant(center)

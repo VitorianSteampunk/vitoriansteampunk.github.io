@@ -3,8 +3,8 @@ layout: default
 ---
 <article class="page-content">
 
-  <header class="wrapper large post-header" data-grid="spacing">
-    <div data-cell="1of2"><img src="{{ site.baseurl }}/img/produtos/{{ page.ref }}.jpg" alt="{{ page.title }}"></div>
+  <header class="wrapper large post-header" data-grid="start spacing">
+    <div data-cell="1of2" class="frame"><img src="{{ site.baseurl }}/img/produtos/{{ page.ref }}.jpg" alt="{{ page.title }}"></div>
     <div data-cell="1of2">
       <h1 class="post-title">{{ page.title }}</h1>
       <p>#{{ page.ref }}</p>
@@ -18,13 +18,10 @@ layout: default
           </a>
         </p>
       {% endif %}
+      <hr>
+      {{ content }}
+      <hr>
     </div>
   </header>
-
-  <div class="post-content">
-    <div data-grid="center" class="site-decoration">{% include svg/floral-design-1.svg %}</div>
-    {{ content }}
-    <div data-grid="center" class="site-decoration">{% include svg/floral-design-2.svg %}</div>
-  </div>
 
 </article>

@@ -74,17 +74,35 @@
             margin-left: 20px
 
 .site-footer
-    padding: $spacing-unit 0
-    background-color: $grey-color-dark
-    color: #fff
+    position: relative
+    padding: $spacing-unit * 2 0
+    background-color: $ocre
+    color: $dourado
     text-shadow: -1px 1px 0 #000
-
+    border-top: 2px solid $dourado
+    box-shadow: 0 0 0 3px $ocre
+    &:before, &:after
+        position: absolute
+        top: 0
+        z-index: 9
+        width: 70px
+        height: 69px
+    &:before
+        content: url('/img/corner-square-top-left.png')
+        left: 0
+    &:after
+        content: url('/img/corner-square-top-right.png')
+        right: 0
     .svg-container
         +media-query($on-palm)
             flex-basis: 149px
             height: 149px
 
-// .footer-heading
+.footer-heading
+    font:
+        family: $base-font-family
+        size: 42px
+    letter-spacing: 5px
 
 .page-content 
     padding: $spacing-unit * 2 0
@@ -147,12 +165,6 @@
         @include media-query($on-laptop) 
             font-size: 18px
 
-.site-decoration
-    svg
-        color: rgba($grey-color, .5)
-        *
-            fill: currentcolor
-
 .display-text
     font-size: 22px
     font-weight: 600
@@ -177,7 +189,7 @@
         @extend .display-text
         font:
             size: 42px
-            family: $display-font-family
+            family: $title-font-family
         letter-spacing: 5px
         +media-query($on-palm)
             font-size: 8vmin
@@ -186,63 +198,53 @@
 
     .produtos-item
         flex: 0 0 260px
-        margin: $spacing-unit / 4
+        margin: $spacing-unit / 2 $spacing-unit / 4
 
-    .produtos-link
+.produtos-frame
+    @extend .frame
+    padding-top: 120%
+    border-width: 4px
+    img
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        transition: 2s ease-in-out
+        transform: scale(1)
+        backface-visibility: hidden
+    .produto-title
         display: block
-        position: relative
-        padding-top: 120%
-        overflow: hidden
-        border-radius: 15px
-        box-sizing: content-box
-        transform: translate(0)
-
+        padding: 40px
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        z-index: 1
+        text-align: center
+        font-weight: 600
+        color: $dourado
+        text-shadow: -1px 2px 0 #000
+        line-height: 1.2
+        letter-spacing: 1px
+        background-image: linear-gradient(to bottom, transparent, #000)
+    &:hover, &:focus
+        box-shadow: 0 0 0 3px $dourado, 0 0 15px 5px $ocre
         img
-            position: absolute
-            top: 0
-            left: 0
-            z-index: -1
-            transition: 2s ease-in-out
-            transform: scale(1)
-            backface-visibility: hidden
-
-        &:hover, &:focus
-            box-shadow: 0 0 0 3px $brand-color
-            img
-                transform: scale(1.1)
-        
-        &:after
-            content: ''
-            display: block
-            position: absolute
-            left: 0
-            right: 0
-            bottom: 0
-            height: 120px
-            z-index: 1
-            background-image: linear-gradient(to bottom, transparent, #000)
-        
-        .produto-title
-            display: block
-            padding: 15px
-            position: absolute
-            bottom: 0
-            left: 0
-            right: 0
-            z-index: 2
-            text-align: center
-            font-weight: 600
-            text-shadow: 0 1px 1px #000
-            line-height: 1.2
-            letter-spacing: 1px
+            transform: scale(1.1)
 
 .section-sobre
     background:
-        image: url(/img/industrial-lamp.jpg)
+        image: url('/img/industrial-lamp.jpg')
         repeat: no-repeat
         position: center
         size: cover
     padding-top: $spacing-unit * 4
     padding-bottom: $spacing-unit * 4
 
-// .section-social
+.section-social
+    +media-greater($on-palm)
+        background:
+            image: url('/img/vintage-objects.png')
+            repeat: no-repeat
+            position: right
+            size: contain

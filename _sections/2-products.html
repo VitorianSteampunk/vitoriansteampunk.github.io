@@ -4,12 +4,12 @@ menu-title: Produtos
 name: produtos
 ---
 
-<div data-grid="center" class="site-decoration">{% include svg/floral-design-1.svg %}</div>
+<hr>
 
 <div data-grid="row wrap around" class="wrapper large produtos-gallery">
     {% for p in site.produtos | limit: 8 %}
         <div class="produtos-item">
-            <a href="{{ p.url }}" class="produtos-link" title="Comprar {{ p.title }}">
+            <a href="{{ p.url }}" class="produtos-frame" title="Comprar {{ p.title }}">
                 <img src="{{ site.baseurl }}/img/produtos/{{ p.ref }}.jpg" alt="{{ p.title }}">
                 <span class="produto-title">{{ p.title }}</span>
             </a>
@@ -17,8 +17,8 @@ name: produtos
     {% endfor %}
 </div>
 
-<div class="wrapper large" data-grid="center">
+<div class="page-content wrapper large" data-grid="center">
     <p data-cell="shrink"><a href="/produtos/" data-btn>Veja todos os modelos...</a></p>
 </div>
 
-<div data-grid="center" class="site-decoration">{% include svg/floral-design-2.svg %}</div>
+<hr>
