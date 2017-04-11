@@ -99,10 +99,10 @@
             height: 149px
 
 .footer-heading
-    font:
-        family: $base-font-family
-        size: 42px
+    font-family: $base-font-family
     letter-spacing: 5px
+    +media-greater($on-palm)
+        font-size: 42px
 
 .page-content 
     padding: $spacing-unit * 2 0
