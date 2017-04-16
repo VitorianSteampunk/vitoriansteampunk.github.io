@@ -81,6 +81,8 @@
     text-shadow: -1px 1px 0 #000
     border-top: 2px solid $dourado
     box-shadow: 0 0 0 3px $ocre
+    +media-query($on-palm)
+        text-align: center
     &:before, &:after
         position: absolute
         top: 0
@@ -94,6 +96,7 @@
         content: url('/img/corner-square-top-right.png')
         right: 0
     .svg-container
+        width: 100%
         +media-query($on-palm)
             flex-basis: 149px
             height: 149px
@@ -206,6 +209,8 @@
     display: block
     position: relative
     overflow: hidden
+    width: 300px
+    max-width: 100%
     padding-top: 120%
     border: 4px double $ocre
     border-radius: 6px
