@@ -2,18 +2,29 @@
 title: Nossos produtos
 menu-title: Produtos
 name: produtos
+produtos:
+    - 1205
+    - 1206
+    - 1207
+    - 1208
+    - 1209
+    - 1210
+    - 1211
+    - 1212
 ---
 
 <hr>
 
 <div data-grid="row wrap around" class="wrapper large produtos-gallery">
-    {% for p in site.produtos | limit: 8 %}
-        <div class="produtos-item">
-            <a href="{{ p.url }}" class="produtos-frame" title="Comprar {{ p.title }}">
-                <img src="{{ site.baseurl }}/img/produtos/{{ p.ref }}.jpg" alt="{{ p.title }}">
-                <span class="produto-title">{{ p.title }}</span>
-            </a>
-        </div>
+    {% for p in site.produtos reversed %}
+        {% if page.produtos contains p.ref %}
+            <div class="produtos-item">
+                <a href="{{ p.url }}" class="produtos-frame" title="Comprar {{ p.title }}">
+                    <img src="{{ site.baseurl }}/img/produtos/{{ p.ref }}.jpg" alt="{{ p.title }}">
+                    <span class="produto-title">{{ p.title }}</span>
+                </a>
+            </div>
+        {% endif %}
     {% endfor %}
 </div>
 

@@ -203,9 +203,13 @@
         margin: $spacing-unit / 2 $spacing-unit / 4
 
 .produtos-frame
-    @extend .frame
+    display: block
+    position: relative
+    overflow: hidden
     padding-top: 120%
-    border-width: 4px
+    border: 4px double $ocre
+    border-radius: 6px
+    transition: .3s ease-in-out
     img
         position: absolute
         top: 0
@@ -231,6 +235,7 @@
         background-image: linear-gradient(to bottom, transparent, #000)
     &:hover, &:focus
         box-shadow: 0 0 0 3px $dourado, 0 0 15px 5px $ocre
+        outline: none
         img
             transform: scale(1.1)
 
