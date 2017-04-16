@@ -31,12 +31,12 @@ $am-prefix: data
         @content
 
 =variant($valueName)
-    $result: split-braces(#{&})
+    $result: split-braces(unquote("#{&}"))
     @at-root [#{$result}~="#{$valueName}"]
         @content
 
 =child($childName)
-    $result: split-braces(#{&})
+    $result: split-braces(unquote("#{&}"))
     @at-root [#{$result}-#{$childName}]
         @content
 
