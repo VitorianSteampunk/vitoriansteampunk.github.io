@@ -5,13 +5,13 @@ menu-title: Produtos
 permalink: /produtos/
 ---
 
-{% for produto in site.produtos %}
+{% for produto in site.produtos reversed %}
 
 <hr>
 
 <article data-grid="start spacing" class="wrapper">
-    <div data-cell="1of3"><div class="produtos-frame"><img src="{{ site.baseurl }}/img/produtos/{{ produto.ref }}.jpg" alt="{{ produto.title }}"></div></div>
-    <div data-cell="2of3">
+    <div data-cell="1of3 fill"><div class="produtos-frame"><img src="{{ site.baseurl }}/img/produtos/{{ produto.ref }}.jpg" alt="{{ produto.title }}"></div></div>
+    <div data-cell="2of3 fill">
         <h2><a href="{{ site.baseurl }}{{ produto.url }}">{{ produto.title }}</a></h2>
         <p><small>#{{ produto.ref }}</small></p>
         {{ produto.content | truncatewords: 30 }}
