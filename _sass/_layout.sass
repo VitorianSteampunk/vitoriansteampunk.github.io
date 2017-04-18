@@ -210,18 +210,9 @@
     display: block
     position: relative
     overflow: hidden
-    padding-top: 120%
     border: 4px double $ocre
     border-radius: 6px
     transition: .3s ease-in-out
-    img
-        position: absolute
-        top: 0
-        left: 0
-        z-index: -1
-        transition: 2s ease-in-out
-        transform: scale(1)
-        backface-visibility: hidden
     .produto-title
         display: block
         padding: 40px
@@ -238,6 +229,15 @@
         letter-spacing: 1px
         background-image: linear-gradient(to bottom, transparent, #000)
 a.produtos-frame
+    padding-top: 120%
+    img
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        transition: 2s ease-in-out
+        transform: scale(1)
+        backface-visibility: hidden
     &:hover, &:focus
         box-shadow: 0 0 0 3px $dourado, 0 0 15px 5px $ocre
         outline: none
