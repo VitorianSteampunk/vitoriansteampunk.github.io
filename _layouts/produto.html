@@ -12,6 +12,8 @@ layout: default
         {% assign price = page.price | split: '.' %}
         {% assign decimal = price[1] | plus:0 %}
         <p><strong>R$ {{ price[0] }},{{ decimal }}{% if decimal < 10 %}0{% endif %}</strong></p>
+        {% capture price_headline %}{% include produto_price_headline.md %}{% endcapture %}
+        {{ price_headline | markdownify }}
       {% endif %}
       {% if page.paycode %}
         <p>
