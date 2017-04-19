@@ -32,8 +32,3 @@ defaults:
       type: posts
     values:
       layout: post
-  - scope:
-      path: ""
-      type: erros
-    values:
-      layout: page
