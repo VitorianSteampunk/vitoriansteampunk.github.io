@@ -63,11 +63,14 @@ a
     &:hover, &:focus
         text-decoration: underline
 
-blockquote 
-    color: $grey-color
-    font-size: 18px
-    letter-spacing: 1px
-    font-style: italic
+blockquote
+    font:
+        family: $serif-font-family
+        style: italic
+        size: 22px
+    letter-spacing: 2px
+    @extend .hero
+    @extend .frame
 
 pre, code 
     font-size: 15px
