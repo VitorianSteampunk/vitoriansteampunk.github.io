@@ -1,7 +1,7 @@
 ---
 title: Frankenstein machine
 ref: 1210
-price: 825
+price: 885
 ---
 
 A vista ou 3x no cartao sem juros
