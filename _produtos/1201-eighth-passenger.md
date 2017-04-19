@@ -1,7 +1,7 @@
 ---
 title: The eighth passenger
 ref: 1201
-price: 454,00
+price: 454.00
 ---
 
 Luminaria de mesa em ferro.
