@@ -7,11 +7,11 @@ layout: default
     <div data-cell="1of2 fill"><div class="produtos-frame"><img src="{{ site.baseurl }}/img/produtos/{{ page.ref }}.jpg" alt="{{ page.title }}"></div></div>
     <div data-cell="1of2 fill">
       <h1 class="post-title">{{ page.title }}</h1>
-      <p>#{{ page.ref }}</p>
+      <p>Modelo {{ page.ref }}</p>
       {% if page.price %}
         {% assign price = page.price | split: '.' %}
         {% assign decimal = price[1] | plus:0 %}
-        <p>R$ {{ price[0] }},{{ decimal }}{% if decimal < 10 %}0{% endif %}</p>
+        <p><strong>R$ {{ price[0] }},{{ decimal }}{% if decimal < 10 %}0{% endif %}</strong></p>
       {% endif %}
       {% if page.paycode %}
         <p>
