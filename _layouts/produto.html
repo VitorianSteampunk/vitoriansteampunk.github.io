@@ -22,7 +22,8 @@ layout: default
       {% endif %}
       {{ content }}
       <hr>
-      {% include produto_rodape.md %}
+      {% capture footer %}{% include produto_rodape.md %}{% endcapture %}
+      {{ footer | markdownify }}
     </div>
   </header>
 
