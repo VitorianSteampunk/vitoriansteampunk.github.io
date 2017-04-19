@@ -8,13 +8,13 @@ layout: default
     <div data-cell="1of2 fill">
       <h1 class="post-title">{{ page.title }}</h1>
       <p>#{{ page.ref }}</p>
+      {% if page.price %}
+        <p>R${{ page.price }}</p>
+      {% endif %}
       {% if page.paycode %}
         <p>
           <a href="{{ page.paycode }}" data-btn="">
             COMPRE AGORA 
-            {% if page.price %}
-              R${{ page.price }}
-            {% endif %}
           </a>
         </p>
       {% endif %}      
