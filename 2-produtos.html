@@ -13,7 +13,7 @@ permalink: /produtos/
     <div data-cell="1of3 fill"><div class="produtos-frame"><img src="{{ site.baseurl }}/img/produtos/{{ produto.ref }}.jpg" alt="{{ produto.title }}"></div></div>
     <div data-cell="2of3 fill">
         <h2><a href="{{ site.baseurl }}{{ produto.url }}">{{ produto.title }}</a></h2>
-        <p><small>#{{ produto.ref }}</small></p>
+        <p><small>Modelo {{ produto.ref }}</small></p>
         {{ produto.content | truncatewords: 30 }}
         <p data-grid="center spacing justify">
             <a href="{{ site.baseurl }}{{ produto.url }}" data-cell="shrink">Mais detalhes...</a>
