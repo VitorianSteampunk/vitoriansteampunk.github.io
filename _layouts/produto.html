@@ -9,7 +9,12 @@ layout: default
       <h1 class="post-title">{{ page.title }}</h1>
       <p>#{{ page.ref }}</p>
       {% if page.price %}
-        <p>R$ {{ page.price }}</p>
+{% comment %}        
+        {% assign price = page.price | split: '.' %}
+        {% assign decimal = price[1] %}
+        <p>R$ {{ price[0] }},{% if decimal < 10 %}0{% endif %}{{ decimal }}</p>
+        {% endcomment %}
+        {{ page.price | money }}
       {% endif %}
       {% if page.paycode %}
         <p>
@@ -20,6 +25,8 @@ layout: default
       {% endif %}      
       <h2>Detalhes do modelo:</h2>
       {{ content }}
+      <hr>
+      {% include produto_rodape.html %}
     </div>
   </header>
 
