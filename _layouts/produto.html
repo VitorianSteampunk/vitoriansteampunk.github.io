@@ -9,12 +9,9 @@ layout: default
       <h1 class="post-title">{{ page.title }}</h1>
       <p>#{{ page.ref }}</p>
       {% if page.price %}
-{% comment %}        
         {% assign price = page.price | split: '.' %}
-        {% assign decimal = price[1] %}
-        <p>R$ {{ price[0] }},{% if decimal < 10 %}0{% endif %}{{ decimal }}</p>
-        {% endcomment %}
-        {{ page.price | money }}
+        {% assign decimal = price[1] | plus:0 %}
+        <p>R$ {{ price[0] }},{{ decimal }}{% if decimal < 10 %}0{% endif %}</p>
       {% endif %}
       {% if page.paycode %}
         <p>
