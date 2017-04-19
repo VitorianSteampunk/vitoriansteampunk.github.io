@@ -3,18 +3,26 @@ layout: default
 ---
 <article class="page-content">
 
-  <header class="wrapper large post-header" data-grid="start spacing">
+  <div class="wrapper large post-header" data-grid="start spacing">
     <div data-cell="1of2 fill"><div class="produtos-frame"><img src="{{ site.baseurl }}/img/produtos/{{ page.ref }}.jpg" alt="{{ page.title }}"></div></div>
     <div data-cell="1of2 fill">
-      <h1 class="post-title">{{ page.title }}</h1>
-      <p>Modelo {{ page.ref }}</p>
+
+      <header>
+        <h1 class="post-title">{{ page.title }}</h1>
+        <p>Modelo {{ page.ref }}</p>
+      </header>
+
       {% if page.price %}
+
         {% assign price = page.price | split: '.' %}
         {% assign decimal = price[1] | plus:0 %}
         <p><strong>R$ {{ price[0] }},{{ decimal }}{% if decimal < 10 %}0{% endif %}</strong></p>
+
         {% capture price_headline %}{% include produto_price_headline.md %}{% endcapture %}
         {{ price_headline | markdownify }}
+
       {% endif %}
+
       {% if page.paycode %}
         <p>
           <a href="{{ page.paycode }}" data-btn="">
@@ -22,11 +30,19 @@ layout: default
           </a>
         </p>
       {% endif %}
+
       {{ content }}
+
       <hr>
+
       {% capture footer %}{% include produto_rodape.md %}{% endcapture %}
       {{ footer | markdownify }}
+
     </div>
-  </header>
+  </div>
 
 </article>
+
+<aside class="section-produtos">
+  {% include destaques.html %}
+</aside>

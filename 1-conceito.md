@@ -17,3 +17,5 @@ excerpt: >
 ## O conceito
 
 No passado, paradigmas tecnológicos modernos surgiram mais cedo do que a realidade da época permitia. Inspirada na literatura, cinema e tantas outras vertentes da arte, a Vitorian Steampunk viaja para criar objetos de decoração em forma de luminárias, trazendo vida aos ambientes mais modernos.
+
+{% include social.html %}

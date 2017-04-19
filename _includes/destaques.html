@@ -1,0 +1,7 @@
+<div class="section-social">
+    {% for section in site.sections %}
+        {% if section.name == "produtos" %}
+            {{ section.content }}
+        {% endif %}
+    {% endfor %}
+</div>
