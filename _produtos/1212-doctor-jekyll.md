@@ -1,7 +1,7 @@
 ---
 title: Doctor Jekyll
 ref: 1212
-price: 1300,00
+price: 1300
 ---
 
 A vista ou 3x no cartao sem juros
