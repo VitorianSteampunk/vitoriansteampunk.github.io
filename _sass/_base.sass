@@ -214,3 +214,21 @@ hr
         letter-spacing: 1px
     +variant(upper)
         text-transform: uppercase
+
++module(modal)
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 999
+    margin: auto
+    background-color: rgba($ocre, .7)
+
+    &:not(:target)
+        display: none
+    
+    .wrapper
+        background-color: $background-color
+        max-height: 90%
+        overflow: auto

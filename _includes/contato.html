@@ -1,0 +1,40 @@
+<div data-modal="" data-grid="row center" id="contato">
+    <form action="http://server.vitoriansteampunk.com/enviar_email.php" method="post" class="wrapper" data-cell="shrink">
+        <div data-grid="row nowrap">
+            <div data-cell="">
+                <h2>Faça seu pedido</h2>
+            </div>
+            <div data-cell="shrink">
+                <p>
+                    <a href="#X" onclick="ga('send', 'event', 'Contato', 'Fechar formulário', '{{ page.title }}');">X</a>
+                </p>
+            </div>
+        </div>
+        <div data-grid="center spacing">
+            <p data-cell="1of3 fill">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" placeholder="Nome completo..." required>
+            </p>
+            <p data-cell="1of3 fill">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" placeholder="email@dominio.com" required>
+            </p>
+            <p data-cell="1of3 fill">
+                <label for="telefone">Telefone (opcional)</label>
+                <input type="tel" name="telefone" placeholder="(99) 0000-0000">
+            </p>
+        </div>
+        <p>
+            <label for="mensagem">Sua mensagem</label>
+            <textarea name="mensagem" cols="30" rows="5"></textarea>
+        </p>
+        <p class="honeypot">
+            <label for="honey">Se estiver vendo isto, deixe este campo em branco:</label>
+            <input type="text" name="honey">
+        </p>
+        <p data-grid="row nowrap center justify">
+            <button data-cell="shrink">Enviar</button>
+            <a href="#X" data-cell="shrink" onclick="ga('send', 'event', 'Contato', 'Fechar formulário', '{{ page.title }}');">FECHAR</a>
+        </p>
+    </form>
+</div>
