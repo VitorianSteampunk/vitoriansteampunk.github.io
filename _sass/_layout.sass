@@ -176,12 +176,14 @@
 
 .section-home
     background:
-        color: $background-color
+        color: $ocre
         image: url(/img/steampunk-wallpapercave.jpg)
         repeat: no-repeat
         position: center
         size: cover
     position: relative
+    color: #fff
+    text-shadow: -.05em .05em 0px $ui-color-2
     &:before
         content: ''
         position: absolute
@@ -199,8 +201,6 @@
             size: 22px
         line-height: 1
         text-transform: uppercase
-        color: #fff
-        text-shadow: -.05em .05em 0px $ui-color-2
     .home-excerpt
         font:
             size: 42px
