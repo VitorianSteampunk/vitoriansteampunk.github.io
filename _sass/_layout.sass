@@ -1,11 +1,11 @@
 .site-header
-    height: 90px
+    width: 100%
+    height: 100px
     position: absolute
     top: 0
     left: 0
     right: 0
-    width: 100%
-    background-image: linear-gradient(#fff 30%, transparent)
+    z-index: 9
     a
         color: $brand-color
 
@@ -173,30 +173,38 @@
         @include media-query($on-laptop) 
             font-size: 18px
 
-.display-text
-    font-size: 22px
-    font-weight: 600
-    color: $ui-color-2
-    line-height: 1
-    text-transform: uppercase
-    text-shadow: -.05em .05em 0px $hero-color
 
 .section-home
     background:
         color: $background-color
-        image: url(/img/room.jpg)
+        image: url(/img/steampunk-wallpapercave.jpg)
         repeat: no-repeat
-        position: top center
+        position: center
         size: cover
-    padding-bottom: 80vmin
+    position: relative
+    &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        height: 100px
+        background-image: linear-gradient(rgba(black, .8), transparent)
     .home-content
         height: 500px
         padding-top: 60px
         padding-bottom: 60px
+    .home-tagline, .home-excerpt
+        font:
+            size: 22px
+        line-height: 1
+        text-transform: uppercase
+        color: #fff
+        text-shadow: -.05em .05em 0px $ui-color-2
     .home-excerpt
-        @extend .display-text
         font:
             size: 42px
+            weight: 600
             family: $title-font-family
         letter-spacing: 5px
         +media-query($on-palm)
