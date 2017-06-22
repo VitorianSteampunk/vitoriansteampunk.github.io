@@ -16,6 +16,6 @@ excerpt: >
 
 ## O conceito
 
-No passado, paradigmas tecnológicos modernos surgiram mais cedo do que a realidade da época permitia compreender. Esse conceito serviu de inspiracao para literatura, cinema e tantas outras vertentes da arte, onde, ate hoje, segue com um dos mais belos conceitos que ja existiram. A Vitorian Steampunk viaja no tempo para criar objetos de decoração em forma de luminárias, trazendo vida aos ambientes mais modernos.
+No passado, paradigmas tecnológicos modernos surgiram mais cedo do que a realidade da época permitia compreender. Esse conceito serviu de inspiracao para literatura, cinema e tantas outras vertentes da arte, onde, ate hoje, segue com um dos mais belos conceitos que ja existiram. A Vitorian Steampunk viaja no tempo para criar objetos de decoração em forma de luminárias, trazendo criatividade e vida aos ambientes mais diversos.
 
 {% include social.html %}
