@@ -20,7 +20,7 @@ defaults:
     type: produtos
   values:
     layout: produto
-    image:
+    image: 
 - scope:
     path: ''
     type: posts
