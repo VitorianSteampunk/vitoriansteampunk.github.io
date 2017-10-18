@@ -1,6 +1,6 @@
 ---
 title: Vitorian Steampunk
-timezone: UTC
+timezone: America/Sao_Paulo
 collections:
   posts:
     title: Posts
@@ -30,7 +30,7 @@ description: 'Arte inspirada na cultura steampunk, aplicada em decoração de al
   mesmo tempo.
 
 '
-baseurl: ''
+baseurl: 
 url: http://vitoriansteampunk.com
 markdown: kramdown
 exclude:
