@@ -1,5 +1,6 @@
 ---
 title: Taxiing guy
+image: "/uploads/1202.jpg"
 ref: 1202
 price: 595
 ---
