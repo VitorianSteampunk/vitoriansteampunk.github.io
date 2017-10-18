@@ -1,5 +1,6 @@
 ---
 title: One soldier parade
+image: "/uploads/1209.jpg"
 ref: 1209
 price: 495
 ---
