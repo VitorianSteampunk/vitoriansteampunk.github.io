@@ -1,5 +1,6 @@
 ---
 title: Alex DeLarge
+image: "/uploads/1203.jpg"
 ref: 1203
 price: 535
 ---
