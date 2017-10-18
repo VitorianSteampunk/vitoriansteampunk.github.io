@@ -1,5 +1,6 @@
 ---
 title: Light pole
+image: "/uploads/1204.jpg"
 ref: 1204
 price: 435
 ---
