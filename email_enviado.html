@@ -4,10 +4,10 @@ layout: page
 excerpt: Recebemos a sua mensagem. Aguarde nossa resposta. Obrigado.
 ---
 
-{% assign tel = site.tel[0] %}
+{% assign tel = site.Telefones[0] %}
 
 <p>Recebemos a sua mensagem. Aguarde nossa resposta. Obrigado.</p>
 
 <p>Volte a explorar <a href="/produtos/">nossos modelos</a>.</p>
 
-<p>Se preferir entre em contato com nossos vendedores: <a href="tel:{{ tel.number }}">{{ tel.title }}</a>.</p>
+<p>Se preferir entre em contato com nossos vendedores: <a href="tel:{{ tel["Número"] }}">{{ tel["Rótulo"] }}</a>.</p>

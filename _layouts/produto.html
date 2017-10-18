@@ -10,16 +10,16 @@ layout: default
 
       <header>
         <h1 class="post-title">{{ page.title }}</h1>
-        <p>Modelo {{ page.ref }}</p>
+        <p>Modelo {{ page.referencia }}</p>
       </header>
 
-      {% if page.price %}
+      {% if page.valor and site["Exibir valores dos produtos"] == true %}
 
-        {% assign price = page.price | split: '.' %}
-        {% assign decimal = price[1] | plus:0 %}
-        <p><strong>R$ {{ price[0] }},{{ decimal }}{% if decimal < 10 %}0{% endif %}</strong></p>
+        {% assign valor = page.valor | split: '.' %}
+        {% assign decimal = valor[1] | plus:0 %}
+        <p><strong>R$ {{ valor[0] }},{{ decimal }}{% if decimal < 10 %}0{% endif %}</strong></p>
 
-        <p>A vista ou em ate 6x no cartão sem juros.</p>
+        <p>{{ site["Cabeçalhos dos produtos"] }}</p>
 
       {% endif %}
 
@@ -33,10 +33,10 @@ layout: default
 
       {{ content }}
 
-      {% assign tel = site.tel[0] %}
+      {% assign tel = site.Telefones[0] %}
       <h2>Para comprar este produto:</h2>
       <p><a href="#contato" data-btn="" onclick="ga('send', 'event', 'Contato', 'Abrir formulário', '{{ page.title }}');">Faça um pedido</a></p>
-      <p>Ou pelo telefone: <a href="tel:{{ tel.number }}">{{ tel.title }}</a>.</p>
+      <p>Ou pelo telefone: <a href="tel:{{ tel["Número"] }}">{{ tel["Rótulo"] }}</a>.</p>
 
     </div>
   </div>

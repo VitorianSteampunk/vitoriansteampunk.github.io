@@ -20,6 +20,8 @@ defaults:
     type: produtos
   values:
     layout: produto
+    referencia:
+    valor:
     image: 
 - scope:
     path: ''
@@ -29,9 +31,11 @@ defaults:
 description: 'Arte inspirada na cultura steampunk, aplicada em decoração de alto padrão. Experimente um ambiente muito mais sofisticado, com aspecto rústico e elegante ao
   mesmo tempo.'
 email: eduardo@vitoriansteampunk.com
-tel:
-  - title: "(11) 9 9555-9624"
-    number: "+5511995559624"
+Telefones:
+  - Rótulo: "(11) 9 9555-9624"
+    Número: "+5511995559624"
+Exibir valores dos produtos: true
+Cabeçalhos dos produtos: A vista ou em ate 6x no cartão sem juros.
 baseurl: 
 url: http://vitoriansteampunk.com
 markdown: kramdown

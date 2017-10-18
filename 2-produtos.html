@@ -10,17 +10,11 @@ menu-title: Produtos
 <hr>
 
 <article data-grid="start spacing" class="wrapper">
-    <div data-cell="1of3 fill"><div class="produtos-frame"><img src="{{ site.baseurl }}{{ produto.image }}" alt="{{ produto.title }}"></div></div>
-    <div data-cell="2of3 fill">
-        <h2><a href="{{ site.baseurl }}{{ produto.url }}">{{ produto.title }}</a></h2>
-        <p><small>Modelo {{ produto.ref }}</small></p>
-        {{ produto.content | truncatewords: 30 }}
-        <p data-grid="center spacing justify">
-            <a href="{{ site.baseurl }}{{ produto.url }}" data-cell="shrink">Mais detalhes...</a>
-            {% if produto.paycode %}
-                <a href="{{ produto.paycode }}" data-btn data-cell="shrink">COMPRAR</a>
-            {% endif %}
-        </p>
+    <div data-cell="1of4 fill"><div class="produtos-frame"><img src="{{ site.baseurl }}{{ produto.image }}" alt="{{ produto.title }}"></div></div>
+    <div data-cell="3of4 fill">
+        <h2>{{ produto.title }}</h2>
+        <p><small>Modelo {{ produto.referencia }}</small></p>
+        {{ produto.content }}
     </div>
 </article>
 

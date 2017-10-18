@@ -1,8 +1,8 @@
 ---
 title: Light pole
 image: "/uploads/1204.jpg"
-ref: 1204
-price: 435
+referencia: 1204
+valor: 435
 ---
 
 Luminaria de mesa em ferro, com registro, acompanha 01 lampada de filamento de carbono voltagem 127 V.

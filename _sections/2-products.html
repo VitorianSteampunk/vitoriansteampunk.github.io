@@ -17,7 +17,7 @@ produtos:
 
 <div data-grid="row wrap around" class="wrapper large produtos-gallery">
     {% for p in site.produtos reversed %}
-        {% if page.produtos contains p.ref %}
+        {% if page.produtos contains p.referencia %}
             <div class="produtos-item">
                 <a href="{{ p.url }}" class="produtos-frame" title="Comprar {{ p.title }}">
                     <img src="{{ site.baseurl }}{{ p.image }}" alt="{{ p.title }}">
