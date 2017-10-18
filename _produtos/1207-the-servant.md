@@ -1,5 +1,6 @@
 ---
 title: The servant
+image: "/uploads/1207.jpg"
 ref: 1207
 price: 1350
 ---
