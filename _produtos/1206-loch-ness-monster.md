@@ -1,5 +1,6 @@
 ---
 title: Loch Ness monster
+image: "/uploads/1206.jpg"
 ref: 1206
 price: 490
 ---
