@@ -1,5 +1,6 @@
 ---
 title: Gimmier hat
+image: "/uploads/1211.jpg"
 ref: 1211
 price: 1200
 ---
