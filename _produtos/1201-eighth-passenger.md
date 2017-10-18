@@ -1,5 +1,6 @@
 ---
 title: The eighth passenger
+image: "/uploads/1201.jpg"
 ref: 1201
 price: 385
 ---
