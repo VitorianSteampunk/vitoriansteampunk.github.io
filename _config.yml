@@ -1,34 +1,42 @@
+---
 title: Vitorian Steampunk
-description: > 
-  Arte inspirada na cultura steampunk, aplicada em decoração de alto padrão.
-  Experimente um ambiente muito mais sofisticado, com aspecto rústico e elegante
-  ao mesmo tempo.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://vitoriansteampunk.com"
+timezone: UTC
+collections:
+  erros:
+    title: Erros
+    output: true
+  posts:
+    title: Posts
+    output: true
+  produtos:
+    title: Produtos
+    output: true
+  sections:
+    title: Sections
+    output: false
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: produtos
+  values:
+    layout: produto
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+description: 'Arte inspirada na cultura steampunk, aplicada em decoração de alto padrão.
+  Experimente um ambiente muito mais sofisticado, com aspecto rústico e elegante ao
+  mesmo tempo.
 
-# Build settings
+'
+baseurl: ''
+url: http://vitoriansteampunk.com
 markdown: kramdown
 exclude:
-  - gulpfile.js
-  - desktop.ini
-  - README.md
-
-collections:
-  sections:
-    output: false
-  produtos:
-    output: true
-  erros:
-    output: true
-  
-defaults:
-  - scope:
-      path: ""
-      type: produtos
-    values:
-      layout: produto
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
+- gulpfile.js
+- desktop.ini
+- README.md

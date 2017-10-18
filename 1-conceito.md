@@ -1,12 +1,13 @@
 ---
-layout: page
 title: Sobre a Vitorian Steampunk
+permalink: "/conceito/"
+layout: page
 menu-title: Conceito
-permalink: /conceito/
-excerpt: >
-    Inspirada na literatura, cinema e tantas outras vertentes da arte,
-    a Vitorian Steampunk viaja para criar objetos de decoração em forma
-    de luminárias, trazendo vida aos ambientes mais modernos.
+excerpt: 'Inspirada na literatura, cinema e tantas outras vertentes da arte, a Vitorian
+  Steampunk viaja para criar objetos de decoração em forma de luminárias, trazendo
+  vida aos ambientes mais modernos.
+
+'
 ---
 
 <blockquote>
