@@ -2,9 +2,6 @@
 title: Vitorian Steampunk
 timezone: UTC
 collections:
-  erros:
-    title: Erros
-    output: true
   posts:
     title: Posts
     output: true
