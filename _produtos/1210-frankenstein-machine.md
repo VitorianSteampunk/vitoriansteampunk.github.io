@@ -1,5 +1,6 @@
 ---
 title: Frankenstein machine
+image: "/uploads/1210.jpg"
 ref: 1210
 price: 750
 ---
