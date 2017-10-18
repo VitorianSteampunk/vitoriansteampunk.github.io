@@ -1,5 +1,6 @@
 ---
 title: Gimma Jab
+image: "/uploads/1205.jpg"
 ref: 1205
 price: 535
 ---
