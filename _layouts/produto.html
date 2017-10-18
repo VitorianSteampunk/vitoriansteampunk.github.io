@@ -5,7 +5,7 @@ layout: default
 <article class="page-content">
 
   <div class="wrapper large post-header" data-grid="start spacing">
-    <div data-cell="1of2 fill"><div class="produtos-frame"><img src="{{ site.baseurl }}/img/produtos/{{ page.ref }}.jpg" alt="{{ page.title }}"></div></div>
+    <div data-cell="1of2 fill"><div class="produtos-frame"><img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.title }}"></div></div>
     <div data-cell="1of2 fill">
 
       <header>
@@ -19,8 +19,7 @@ layout: default
         {% assign decimal = price[1] | plus:0 %}
         <p><strong>R$ {{ price[0] }},{{ decimal }}{% if decimal < 10 %}0{% endif %}</strong></p>
 
-        {% capture price_headline %}{% include produto_price_headline.md %}{% endcapture %}
-        {{ price_headline | markdownify }}
+        <p>A vista ou em ate 6x no cartão sem juros.</p>
 
       {% endif %}
 
@@ -34,14 +33,12 @@ layout: default
 
       {{ content }}
 
-      {% capture footer %}{% include produto_rodape.md %}{% endcapture %}
-      {{ footer | markdownify }}
+      {% assign tel = site.tel[0] %}
+      <h2>Para comprar este produto:</h2>
+      <p><a href="#contato" data-btn="" onclick="ga('send', 'event', 'Contato', 'Abrir formulário', '{{ page.title }}');">Faça um pedido</a></p>
+      <p>Ou pelo telefone: <a href="tel:{{ tel.number }}">{{ tel.title }}</a>.</p>
 
     </div>
   </div>
 
 </article>
-
-<aside class="section-produtos">
-  {% include destaques.html %}
-</aside>

@@ -20,7 +20,7 @@ produtos:
         {% if page.produtos contains p.ref %}
             <div class="produtos-item">
                 <a href="{{ p.url }}" class="produtos-frame" title="Comprar {{ p.title }}">
-                    <img src="{{ site.baseurl }}/img/produtos/{{ p.ref }}.jpg" alt="{{ p.title }}">
+                    <img src="{{ site.baseurl }}{{ p.image }}" alt="{{ p.title }}">
                     <span class="produto-title">{{ p.title }}</span>
                 </a>
             </div>

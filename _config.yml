@@ -26,11 +26,12 @@ defaults:
     type: posts
   values:
     layout: post
-description: 'Arte inspirada na cultura steampunk, aplicada em decoração de alto padrão.
-  Experimente um ambiente muito mais sofisticado, com aspecto rústico e elegante ao
-  mesmo tempo.
-
-'
+description: 'Arte inspirada na cultura steampunk, aplicada em decoração de alto padrão. Experimente um ambiente muito mais sofisticado, com aspecto rústico e elegante ao
+  mesmo tempo.'
+email: eduardo@vitoriansteampunk.com
+tel:
+  - title: "(11) 9 9555-9624"
+    number: "+5511995559624"
 baseurl: 
 url: http://vitoriansteampunk.com
 markdown: kramdown
